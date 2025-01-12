@@ -1,0 +1,15 @@
+name: First Workflow
+
+#When should the workflow be executed
+on: workflow_dispatch
+
+#Jobs to run when on condition is triggered
+jobs:
+  first-job: 
+    # Runners to run the CI on e.g. Windows, Mac, Linux https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for--private-repositories
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
